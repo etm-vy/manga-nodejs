@@ -22,10 +22,10 @@ router.post('/',(request, response) => {
         HandleError(response, "missing information", "post data missing", 500);
     } else{
         manga = new MangaSchema({
-            name: MangaJSON.manga,
-            status: MangaJSON.status,
-            chapter: MangaJSON.chapter,
-            genre: MangaJSON.genre
+            name: mangaJSON.manga,
+            status: mangaJSON.status,
+            chapter: mangaJSON.chapter,
+            genre: mangaJSON.genre
         });
         manga.save().then((MangaSchema) => {
             response.send({"id": manga.id});

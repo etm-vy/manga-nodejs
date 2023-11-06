@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = 'mongodb://localhost/mangas';
+const url = 'mongodb://127.0.0.1:27017/mangas';
 
 mongoose.connect(url, {useUnifiedTopology: true, useNewUrlParser: true});
 const db = mongoose.connection; 
